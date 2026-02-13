@@ -330,7 +330,8 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## 👨‍💻 Author
 
-Created with ❤️ by [Your Name]
+Created with ❤️ by Aditya
+
 
 ## 🤝 Contributing
 
@@ -349,3 +350,4 @@ If you have any questions or need help, please open an issue in the repository.
 ---
 
 **⭐ If you like this project, please give it a star!**
+

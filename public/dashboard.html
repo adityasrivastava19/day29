@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Manage your todos with TaskFlow dashboard">
+    <title>Dashboard - TaskFlow</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="background-gradient"></div>
+
+    <div class="dashboard-container">
+        <!-- Header -->
+        <header class="dashboard-header">
+            <div class="header-content">
+                <div class="logo-small">
+                    <div class="logo-icon">✓</div>
+                    <h1>TaskFlow</h1>
+                </div>
+                <div class="header-actions">
+                    <span id="userName" class="user-name">User</span>
+                    <button id="logoutBtn" class="btn btn-secondary">Logout</button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="dashboard-main">
+            <div class="content-wrapper">
+                <!-- Add Todo Section -->
+                <section class="add-todo-section">
+                    <div class="glass-card">
+                        <h2>✨ Add New Task</h2>
+                        <form id="addTodoForm">
+                            <div class="form-row">
+                                <div class="form-group flex-2">
+                                    <label for="todoTitle">Task Title</label>
+                                    <input type="text" id="todoTitle" placeholder="What needs to be done?" required>
+                                </div>
+                                <div class="form-group flex-3">
+                                    <label for="todoDescription">Description</label>
+                                    <input type="text" id="todoDescription" placeholder="Add some details..." required>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-add">
+                                    <span>+ Add Task</span>
+                                    <div class="btn-glow"></div>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+
+                <!-- Todos List Section -->
+                <section class="todos-section">
+                    <div class="section-header">
+                        <h2>📝 Your Tasks</h2>
+                        <div class="stats">
+                            <span id="todoCount" class="stat-badge">0 tasks</span>
+                        </div>
+                    </div>
+
+                    <div id="todosContainer" class="todos-grid">
+                        <!-- Todos will be inserted here -->
+                    </div>
+
+                    <!-- Empty State -->
+                    <div id="emptyState" class="empty-state hidden">
+                        <div class="empty-icon">📋</div>
+                        <h3>No tasks yet</h3>
+                        <p>Start by adding your first task above</p>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- Notification Toast -->
+    <div id="notification" class="notification hidden">
+        <span id="notificationMessage"></span>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

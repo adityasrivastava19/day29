@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Secure JWT-authenticated Todo application with modern design">
+    <title>TaskFlow - Organize Your Life</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-gradient"></div>
+    <div class="auth-container">
+        <div class="glass-card">
+            <div class="logo">
+                <div class="logo-icon">✓</div>
+                <h1>TaskFlow</h1>
+            </div>
+            <p class="tagline">Organize your life, one task at a time</p>
+            
+            <!-- Login Form -->
+            <form id="loginForm" class="auth-form">
+                <h2>Welcome Back</h2>
+                <div class="form-group">
+                    <label for="loginUsername">Username</label>
+                    <input type="text" id="loginUsername" placeholder="Enter your username" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" placeholder="Enter your password" required>
+                </div>
+                <button type="submit" class="btn btn-primary">
+                    <span>Sign In</span>
+                    <div class="btn-glow"></div>
+                </button>
+                <p class="switch-text">
+                    Don't have an account? 
+                    <a href="#" id="showSignup" class="switch-link">Create one</a>
+                </p>
+            </form>
+
+            <!-- Signup Form -->
+            <form id="signupForm" class="auth-form hidden">
+                <h2>Create Account</h2>
+                <div class="form-group">
+                    <label for="signupName">Full Name</label>
+                    <input type="text" id="signupName" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupUsername">Username</label>
+                    <input type="text" id="signupUsername" placeholder="Choose a username" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupPassword">Password</label>
+                    <input type="password" id="signupPassword" placeholder="Create a strong password" required>
+                </div>
+                <button type="submit" class="btn btn-primary">
+                    <span>Create Account</span>
+                    <div class="btn-glow"></div>
+                </button>
+                <p class="switch-text">
+                    Already have an account? 
+                    <a href="#" id="showLogin" class="switch-link">Sign in</a>
+                </p>
+            </form>
+        </div>
+        
+        <!-- Notification Toast -->
+        <div id="notification" class="notification hidden">
+            <span id="notificationMessage"></span>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
